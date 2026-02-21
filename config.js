@@ -8,7 +8,7 @@
 const CONFIG = {
 
   // ----------------------------------------------------------
-  // 🧑 PERSONAL INFO
+  // 🧑 PERSONAL INFO Here
   // ----------------------------------------------------------
   name: "Merin Rose Tom",
   title: "Senior Software Engineer | Backend Developer",
