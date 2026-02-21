@@ -2,6 +2,8 @@
 
 A simple, customizable portfolio website you can deploy to GitHub Pages in minutes. **No frameworks, no build tools** — just HTML, CSS, and JavaScript.
 
+![Portfolio Homepage](screenshot.png)
+
 ---
 
 ## 📋 Quick Start (Step-by-Step)
@@ -16,8 +18,8 @@ A simple, customizable portfolio website you can deploy to GitHub Pages in minut
 Open a terminal and run:
 
 ```bash
-git clone https://github.com/MerinRose123/merin-portfolio.git
-cd merin-portfolio
+git clone https://github.com/MerinRose123/portfolio.git
+cd portfolio
 ```
 
 > Replace `MerinRose123` with your actual GitHub username.
@@ -64,7 +66,7 @@ git push origin main
 Your portfolio will be live at:
 
 ```
-https://MerinRose123.github.io/merin-portfolio/
+https://MerinRose123.github.io/portfolio/
 ```
 
 > It may take 1–2 minutes for the site to appear.
@@ -74,7 +76,7 @@ https://MerinRose123.github.io/merin-portfolio/
 ## 📁 Project Structure
 
 ```
-merin-portfolio/
+portfolio/
 ├── config.js      ← ✏️ Edit this to customize your portfolio
 ├── index.html     ← Page layout (no need to edit)
 ├── style.css      ← Styling (no need to edit)
