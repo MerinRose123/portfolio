@@ -21,13 +21,14 @@
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links" id="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#achievements">Achievements</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about" data-section="about">About</a></li>
+      <li><a href="#experience" data-section="experience">Experience</a></li>
+      <li><a href="#skills" data-section="skills">Skills</a></li>
+      <li><a href="#projects" data-section="projects">Projects</a></li>
+      <li><a href="#education" data-section="education">Education</a></li>
+      <li><a href="#achievements" data-section="achievements">Achievements</a></li>
+      <li><a href="#hobbies" data-section="hobbies">Hobbies</a></li>
+      <li><a href="#contact" data-section="contact">Contact</a></li>
     </ul>
   </nav>
 
@@ -112,6 +113,14 @@
     </div>
   </section>
 
+  <!-- Hobbies Section -->
+  <section class="section" id="hobbies">
+    <div class="container">
+      <h2 class="section-title">Hobbies & Interests</h2>
+      <div id="hobbies-grid" class="projects-grid"></div>
+    </div>
+  </section>
+
   <!-- Contact / Footer -->
   <footer class="footer" id="contact">
     <div class="container">
@@ -166,98 +175,157 @@
         heroSocials.innerHTML += `<a href="${link.url}" target="_blank" rel="noopener" class="social-btn" title="${link.label}">${icon(link.icon)}</a>`;
       });
 
+      // --- Helper: hide a section and its nav link if data is empty ---
+      function hideSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) section.style.display = "none";
+        const navLink = document.querySelector(`[data-section="${sectionId}"]`);
+        if (navLink) navLink.parentElement.style.display = "none";
+      }
+
       // --- About ---
-      document.getElementById("about-text").textContent = C.summary;
+      if (C.summary) {
+        document.getElementById("about-text").textContent = C.summary;
+      } else {
+        hideSection("about");
+      }
 
       // --- Experience ---
-      const timeline = document.getElementById("experience-timeline");
-      C.experience.forEach(exp => {
-        let rolesHtml = "";
-        exp.roles.forEach(role => {
-          const bullets = role.bullets.map(b => `<li>${b}</li>`).join("");
-          rolesHtml += `
-            <div class="timeline-role">
-              <h4 class="role-title">${role.title}</h4>
-              <span class="role-dates">${role.dates}</span>
-              <ul class="role-bullets">${bullets}</ul>
+      if (C.experience && C.experience.length > 0) {
+        const timeline = document.getElementById("experience-timeline");
+        C.experience.forEach(exp => {
+          let rolesHtml = "";
+          exp.roles.forEach(role => {
+            const bullets = role.bullets.map(b => `<li>${b}</li>`).join("");
+            rolesHtml += `
+              <div class="timeline-role">
+                <h4 class="role-title">${role.title}</h4>
+                <span class="role-dates">${role.dates}</span>
+                <ul class="role-bullets">${bullets}</ul>
+              </div>`;
+          });
+          timeline.innerHTML += `
+            <div class="timeline-item glass-card">
+              <div class="timeline-dot"></div>
+              <div class="timeline-header">
+                <h3 class="company-name">${exp.company}</h3>
+                <span class="company-meta">${exp.location} · ${exp.overallDates}</span>
+              </div>
+              ${rolesHtml}
             </div>`;
         });
-        timeline.innerHTML += `
-          <div class="timeline-item glass-card">
-            <div class="timeline-dot"></div>
-            <div class="timeline-header">
-              <h3 class="company-name">${exp.company}</h3>
-              <span class="company-meta">${exp.location} · ${exp.overallDates}</span>
-            </div>
-            ${rolesHtml}
-          </div>`;
-      });
+      } else {
+        hideSection("experience");
+      }
 
       // --- Skills ---
-      const skillsGrid = document.getElementById("skills-grid");
-      C.skills.forEach(group => {
-        const pills = group.items.map(s => `<span class="skill-pill">${s}</span>`).join("");
-        skillsGrid.innerHTML += `
-          <div class="skill-category glass-card">
-            <h3 class="skill-cat-title">${group.category}</h3>
-            <div class="skill-pills">${pills}</div>
-          </div>`;
-      });
+      if (C.skills && C.skills.length > 0) {
+        const skillsGrid = document.getElementById("skills-grid");
+        C.skills.forEach(group => {
+          const pills = group.items.map(s => `<span class="skill-pill">${s}</span>`).join("");
+          skillsGrid.innerHTML += `
+            <div class="skill-category glass-card">
+              <h3 class="skill-cat-title">${group.category}</h3>
+              <div class="skill-pills">${pills}</div>
+            </div>`;
+        });
+      } else {
+        hideSection("skills");
+      }
 
       // --- Projects ---
-      const projectsGrid = document.getElementById("projects-grid");
-      C.projects.forEach(proj => {
-        const bullets = proj.bullets.map(b => `<li>${b}</li>`).join("");
-        projectsGrid.innerHTML += `
-          <div class="project-card glass-card">
-            <div class="project-header">
-              <h3 class="project-name">${proj.name}</h3>
-              <span class="project-dates">${proj.dates}</span>
-            </div>
-            <ul class="project-bullets">${bullets}</ul>
-          </div>`;
-      });
+      if (C.projects && C.projects.length > 0) {
+        const projectsGrid = document.getElementById("projects-grid");
+        C.projects.forEach(proj => {
+          const bullets = proj.bullets.map(b => `<li>${b}</li>`).join("");
+          projectsGrid.innerHTML += `
+            <div class="project-card glass-card">
+              <div class="project-header">
+                <h3 class="project-name">${proj.name}</h3>
+                <span class="project-dates">${proj.dates}</span>
+              </div>
+              <ul class="project-bullets">${bullets}</ul>
+            </div>`;
+        });
+      } else {
+        hideSection("projects");
+      }
 
       // --- Education ---
-      const eduContent = document.getElementById("education-content");
-      C.education.forEach(edu => {
-        const highlights = edu.highlights.map(h => `<li>${h}</li>`).join("");
-        eduContent.innerHTML += `
-          <div class="edu-card glass-card">
-            <div class="edu-header">
-              <h3 class="edu-degree">${edu.degree}</h3>
-              <span class="edu-dates">${edu.dates}</span>
-            </div>
-            <p class="edu-institution">${edu.institution} · ${edu.location}</p>
-            ${edu.gpa ? `<p class="edu-gpa">GPA: <strong>${edu.gpa}</strong></p>` : ""}
-            <ul class="edu-highlights">${highlights}</ul>
-          </div>`;
-      });
+      if (C.education && C.education.length > 0) {
+        const eduContent = document.getElementById("education-content");
+        C.education.forEach(edu => {
+          const highlights = edu.highlights.map(h => `<li>${h}</li>`).join("");
+          eduContent.innerHTML += `
+            <div class="edu-card glass-card">
+              <div class="edu-header">
+                <h3 class="edu-degree">${edu.degree}</h3>
+                <span class="edu-dates">${edu.dates}</span>
+              </div>
+              <p class="edu-institution">${edu.institution} · ${edu.location}</p>
+              ${edu.gpa ? `<p class="edu-gpa">GPA: <strong>${edu.gpa}</strong></p>` : ""}
+              <ul class="edu-highlights">${highlights}</ul>
+            </div>`;
+        });
+      } else {
+        hideSection("education");
+      }
 
-      // --- Achievements ---
-      const achieveList = document.getElementById("achievements-list");
-      C.achievements.forEach(a => {
-        achieveList.innerHTML += `
-          <div class="achieve-item glass-card">
-            <h4 class="achieve-title">${a.title}</h4>
-            <span class="achieve-dates">${a.dates}</span>
-            <p class="achieve-desc">${a.description}</p>
-          </div>`;
-      });
+      // --- Achievements & Certifications ---
+      const hasAchievements = C.achievements && C.achievements.length > 0;
+      const hasCertifications = C.certifications && C.certifications.length > 0;
 
-      // --- Certifications ---
-      const certList = document.getElementById("certifications-list");
-      C.certifications.forEach(c => {
-        certList.innerHTML += `
-          <div class="cert-item glass-card">
-            <h4 class="cert-name">${c.name}</h4>
-            <p class="cert-meta">${c.issuer} · ${c.date}</p>
-          </div>`;
-      });
+      if (hasAchievements || hasCertifications) {
+        if (hasAchievements) {
+          const achieveList = document.getElementById("achievements-list");
+          C.achievements.forEach(a => {
+            achieveList.innerHTML += `
+              <div class="achieve-item glass-card">
+                <h4 class="achieve-title">${a.title}</h4>
+                <span class="achieve-dates">${a.dates}</span>
+                <p class="achieve-desc">${a.description}</p>
+              </div>`;
+          });
+        } else {
+          // Hide the awards column if no achievements
+          document.querySelector(".achievements-col:first-child").style.display = "none";
+        }
+
+        if (hasCertifications) {
+          const certList = document.getElementById("certifications-list");
+          C.certifications.forEach(c => {
+            certList.innerHTML += `
+              <div class="cert-item glass-card">
+                <h4 class="cert-name">${c.name}</h4>
+                <p class="cert-meta">${c.issuer} · ${c.date}</p>
+              </div>`;
+          });
+        } else {
+          // Hide the certifications column if no certifications
+          document.querySelector(".achievements-col:last-child").style.display = "none";
+        }
+      } else {
+        hideSection("achievements");
+      }
+
+      // --- Hobbies ---
+      if (C.hobbies && C.hobbies.length > 0) {
+        const hobbiesGrid = document.getElementById("hobbies-grid");
+        C.hobbies.forEach(hobby => {
+          hobbiesGrid.innerHTML += `
+            <div class="project-card glass-card">
+              <div class="project-header" style="justify-content: flex-start; align-items: center;">
+                <span style="font-size: 2rem; margin-right: 12px;">${hobby.icon}</span>
+                <h3 class="project-name" style="margin-bottom: 0;">${hobby.title}</h3>
+              </div>
+              <p class="achieve-desc" style="margin-top: 12px;">${hobby.description}</p>
+            </div>`;
+        });
+      } else {
+        hideSection("hobbies");
+      }
 
       // --- Footer ---
-      const footerContact = document.getElementById("footer-contact");
-      footerContact.innerHTML = "";
 
       const footerSocials = document.getElementById("footer-socials");
       C.socialLinks.forEach(link => {

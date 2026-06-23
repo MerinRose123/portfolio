@@ -8,17 +8,12 @@
 const CONFIG = {
 
   // ----------------------------------------------------------
-  // 🧑 PERSONAL INFO Here
+  // 🧑 PERSONAL INFO
   // ----------------------------------------------------------
   name: "Merin Rose Tom",
   title: "Senior Software Engineer | Backend & Cloud Engineer",
   profileImage: "profile.png", // Place your photo in this folder and update the filename
 
-  // ----------------------------------------------------------
-  // 📬 CONTACT
-  // ----------------------------------------------------------
-  email: "merin.pottananickal@gmail.com",
-  address: "Kazhakkoottam, Thiruvananthapuram, Kerala, India",
 
   // ----------------------------------------------------------
   // 🔗 SOCIAL LINKS
@@ -174,5 +169,16 @@ const CONFIG = {
     { name: "OCI 2024 Generative AI Certified Professional", issuer: "Oracle", date: "June 2024" },
     { name: "HackerRank Python Certificate", issuer: "HackerRank", date: "May 2024" },
     { name: "OCI Foundations 2021 Certified Associate", issuer: "Oracle", date: "December 2021" },
+  ],
+
+  // ----------------------------------------------------------
+  // 🎯 HOBBIES / INTERESTS
+  // Add your hobbies with an emoji icon and a short description.
+  // Leave the array empty [] to hide this section entirely.
+  // ----------------------------------------------------------
+  hobbies: [
+    { icon: "🏸", title: "Badminton", description: "My go-to sport for staying fit, having fun, and unwinding after a long day of coding!" },
+    { icon: "♟️", title: "Chess", description: "As a university rank holder and team captain, chess sharpens my strategic thinking." },
+    { icon: "🎨", title: "Drawing", description: "Drawing allows me to express my creativity and relax through artistic expression." },
   ],
 };

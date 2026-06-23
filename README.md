@@ -18,11 +18,11 @@ A simple, customizable portfolio website you can deploy to GitHub Pages in minut
 Open a terminal and run:
 
 ```bash
-git clone https://github.com/MerinRose123/portfolio.git
+git clone https://github.com/YOUR_USERNAME/portfolio.git
 cd portfolio
 ```
 
-> Replace `MerinRose123` with your actual GitHub username.
+> Replace `YOUR_USERNAME` with your actual GitHub username.
 
 ### Step 3: Customize Your Portfolio
 
@@ -34,14 +34,14 @@ Update the fields with your own information:
 const CONFIG = {
   name: "Your Name",
   title: "Your Job Title",
-  email: "your@email.com",
-  address: "Your City, Country",
   summary: "A short professional summary about yourself...",
   // ... update experience, skills, projects, education, etc.
 };
 ```
 
 **Replace `profile.png`** with your own photo (keep the same filename, or update `profileImage` in `config.js`).
+
+> **💡 Tip:** Any section with an empty array (`[]`) will be automatically hidden from the page and the navigation menu. So if you don't have work experience or certifications yet, just leave those arrays empty!
 
 ### Step 4: Preview Locally (Optional)
 
@@ -66,7 +66,7 @@ git push origin main
 Your portfolio will be live at:
 
 ```
-https://MerinRose123.github.io/portfolio/
+https://YOUR_USERNAME.github.io/portfolio/
 ```
 
 > It may take 1–2 minutes for the site to appear.
@@ -88,21 +88,22 @@ portfolio/
 
 ## 🎨 What You Can Customize (in config.js)
 
-| Field            | Description                                |
-| ---------------- | ------------------------------------------ |
-| `name`           | Your full name                             |
-| `title`          | Job title / tagline                        |
-| `email`          | Contact email                              |
-| `address`        | Your location                              |
-| `profileImage`   | Filename of your profile photo             |
-| `socialLinks`    | LinkedIn, GitHub, LeetCode, Website, etc.  |
-| `summary`        | Professional summary paragraph             |
-| `experience`     | Work history with roles and bullet points  |
-| `skills`         | Skills grouped by category                 |
-| `projects`       | Project details with descriptions          |
-| `education`      | Degree, institution, GPA, honors           |
-| `achievements`   | Awards and recognitions                    |
-| `certifications` | Professional certifications                |
+| Field            | Description                                | Required? |
+| ---------------- | ------------------------------------------ | --------- |
+| `name`           | Your full name                             | ✅ Yes     |
+| `title`          | Job title / tagline                        | ✅ Yes     |
+| `profileImage`   | Filename of your profile photo             | ✅ Yes     |
+| `socialLinks`    | LinkedIn, GitHub, LeetCode, Website, etc.  | ✅ Yes     |
+| `summary`        | Professional summary paragraph             | Optional  |
+| `experience`     | Work history with roles and bullet points  | Optional  |
+| `skills`         | Skills grouped by category                 | Optional  |
+| `projects`       | Project details with descriptions          | Optional  |
+| `education`      | Degree, institution, GPA, honors           | Optional  |
+| `achievements`   | Awards and recognitions                    | Optional  |
+| `certifications` | Professional certifications                | Optional  |
+| `hobbies`        | Hobbies and interests                      | Optional  |
+
+> **Note:** Optional sections with empty arrays (`[]`) are automatically hidden from both the page content and the navigation menu.
 
 ---
 
@@ -110,7 +111,8 @@ portfolio/
 
 - **Profile photo**: Use a square image for best results. Name it `profile.png` or update the `profileImage` field in `config.js`.
 - **Social links**: Add or remove entries in the `socialLinks` array. Supported icons: `linkedin`, `github`, `leetcode`, `globe`, `medium`.
-- **Rename the repo**: If you rename your repo to `MerinRose123.github.io`, it becomes your main GitHub Pages site at `https://MerinRose123.github.io/`.
+- **Hide sections**: Leave any section array empty (`[]`) and it will be automatically hidden.
+- **Rename the repo**: If you rename your repo to `YOUR_USERNAME.github.io`, it becomes your main GitHub Pages site at `https://YOUR_USERNAME.github.io/`.
 
 ---
 
