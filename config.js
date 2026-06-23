@@ -48,12 +48,12 @@ const CONFIG = {
       overallDates: "December 2021 – Present",
       roles: [
         {
-          title: "Senior Software Engineer | Python, Java, Cloud",
+          title: "Senior Software Engineer | Backend & Cloud Engineer",
           dates: "September 2024 – Present",
           bullets: [
-            "Enhanced and maintained core features of PeopleSoft Cloud Manager, a critical tool for streamlining the deployment and maintenance of PeopleSoft environments on OCI, serving over 200 customers globally.",
-            "Facilitated the integration of Cloud Manager with various Oracle Cloud services, troubleshooting complex customer issues to boost application performance and user experience.",
-            "Collaborated with QA and tools teams to streamline test automation workflows, creating automation scripts in shell to improve product quality and development efficiency by 5%.",
+            "Revamped backend features of a distributed infrastructure management tool, using Python and Java to power lifecycle management of enterprise environments for 200+ customers globally.",
+            "Architected a secure credential management framework leveraging Cloud Vault, centralizing secrets storage and rotation, resulting in a 30% reduction in manual credential administration effort and strengthening platform security.",
+            "Solely owned and transformed CI/CD build infrastructure using Jenkins, engineering resource cleanup pipelines that reduced cloud costs by 25% and ensured nightly product automation remained available for release cycles.",
             "Developed AI-powered workflows for debugging, log analysis, database inspection, and documentation generation, improving developer productivity by 30% across Java and Python codebases.",
           ],
         },
@@ -61,9 +61,9 @@ const CONFIG = {
           title: "Software Engineer II | Backend Developer",
           dates: "December 2021 – August 2024",
           bullets: [
-            "Architected and implemented innovative cloud solutions on the Oracle Cloud platform using Java, Python, and PeopleCode, and modernized legacy systems.",
-            "Managed the full lifecycle of custom image creation and build processes for the Cloud Manager, ensuring consistent, efficient, and reliable environment provisioning.",
-            "Integrated third-party solutions, including OpenSearch and Cobol, into existing PeopleSoft applications to ensure seamless data flow and enhanced functionality.",
+            "Orchestrated the integration of core Oracle Cloud services (Compute, Storage, Databases, Auto Scaling, Exadata) and third-party solutions (Terraform, OpenSearch), while building resilient REST APIs to optimize data flow and service interoperability.",
+            "Led cross-team collaboration with stakeholders to deliver cloud features (password management, instance cloning, image handling) and cross-platform integrations; owned full lifecycle from FDD/TDD creation to production rollout.",
+            "Embedded OpenSearch cluster architectures into custom cloud environments used by 200+ enterprise customers, enabling node clustering for enhanced scalability and fault tolerance across large-scale enterprise workflows.",
           ],
         },
       ],
@@ -75,20 +75,12 @@ const CONFIG = {
       roles: [
         {
           title: "Software Engineer | Full Stack Developer",
-          dates: "July 2020 – November 2021",
+          dates: "July 2019 – November 2021",
           bullets: [
-            "Created a Python-based machine learning system to automatically process digital documents and detect piracy levels, serving as a core component of the Gordian project.",
-            "Contributed to the back-end architecture design using Django and Flask, including database modeling with PostgreSQL and asynchronous task management with Celery.",
-            "Engineered an asynchronous Celery pipeline to generate PDF reports from 16GB+ datasets under memory constraints, leveraging a shared in-memory LRU Cache to eliminate redundant loads.",
-          ],
-        },
-        {
-          title: "Programmer Trainee | Python Programmer",
-          dates: "July 2019 – June 2020",
-          bullets: [
-            "Managed the full software development lifecycle from client interaction and customer support to code optimization, database design, and debugging.",
-            "Gained hands-on experience with Python and frameworks like Django and Flask while contributing to the development of internal systems.",
-            "Constructed a responsive front-end using the Angular framework and JavaScript, creating components for data visualization, secure authentication, and robust error handling.",
+            "Designed a scalable multi-tenant backend application on AWS EC2 using Python, Django, Flask, PostgreSQL, and Celery, establishing microservice-based patterns that improved operational efficiency by 15%.",
+            "Built EventOPS, an event management platform featuring rule-based triggers, scheduling engines using Celery and Redis, automated notifications and role-based access control, reducing manual event-management effort by 20%.",
+            "Implemented a machine learning-driven system using Pandas, NumPy, and Matplotlib, processing 50,000+ records to surface actionable insights — visualized via a secure Angular dashboard.",
+            "Engineered an asynchronous Celery pipeline to generate PDF reports from 16GB+ datasets under memory constraints, leveraging a shared in-memory LRU Cache to eliminate redundant loads - improving user experience by 20%.",
           ],
         },
       ],
@@ -103,9 +95,8 @@ const CONFIG = {
     { category: "Programming", items: ["Python", "Java", "JavaScript", "Shell Script"] },
     { category: "Frameworks", items: ["Django", "Flask", "Angular"] },
     { category: "Databases", items: ["Oracle", "PostgreSQL", "MySQL", "MongoDB"] },
-    { category: "Cloud", items: ["Oracle Cloud Infrastructure (OCI)"] },
     { category: "DevOps & Tools", items: ["Jenkins", "Docker", "Git", "Puppet", "Nginx", "Terraform"] },
-    { category: "System Design", items: ["Microservices", "REST APIs", "Architecture", "CI/CD", "Unit Testing"] },
+    { category: "System Design", items: ["Microservices", "REST APIs", "Architecture", "CI/CD", "Unit Testing", "Oracle Cloud Infrastructure (OCI)"] },
     { category: "Other", items: ["Data Structures & Algorithms", "Third-Party Integration", "Debugging", "Client Interaction"] },
   ],
 
@@ -135,6 +126,7 @@ const CONFIG = {
       name: "EventOPS – Internal Event Management System",
       dates: "2019 – 2021",
       bullets: [
+        "Built EventOPS, an event management platform featuring rule-based triggers, scheduling engines using Celery and Redis, automated notifications and role-based access control, reducing manual event-management effort by 20%.",
         "Constructed and released backend microservices architecture utilizing Django and Flask, optimizing system efficiency by 15% through optimized code and scalable architecture.",
         "Designed and established a comprehensive unit testing framework using Django multi-tenancy architecture, increasing unit test coverage by 30%.",
       ],
