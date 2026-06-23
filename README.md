@@ -93,7 +93,7 @@ portfolio/
 | `name`           | Your full name                             | ✅ Yes     |
 | `title`          | Job title / tagline                        | ✅ Yes     |
 | `profileImage`   | Filename of your profile photo             | ✅ Yes     |
-| `socialLinks`    | LinkedIn, GitHub, LeetCode, Website, etc.  | ✅ Yes     |
+| `socialLinks`    | LinkedIn, GitHub, LeetCode, Website, etc.  | Optional      |
 | `summary`        | Professional summary paragraph             | Optional  |
 | `experience`     | Work history with roles and bullet points  | Optional  |
 | `skills`         | Skills grouped by category                 | Optional  |
