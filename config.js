@@ -11,7 +11,7 @@ const CONFIG = {
   // 🧑 PERSONAL INFO Here
   // ----------------------------------------------------------
   name: "Merin Rose Tom",
-  title: "Senior Software Engineer | Backend Developer",
+  title: "Senior Software Engineer | Backend & Cloud Engineer",
   profileImage: "profile.png", // Place your photo in this folder and update the filename
 
   // ----------------------------------------------------------
@@ -36,7 +36,7 @@ const CONFIG = {
   // 📝 SUMMARY / ABOUT
   // ----------------------------------------------------------
   summary:
-    "Senior Application Engineer with 6+ years of experience in backend development, cloud automation, and modernizing large-scale enterprise systems. Skilled in Python, Java, OCI, and CI/CD pipeline engineering with a strong focus on performance optimization and production reliability.",
+    "Senior Application Engineer with 7+ years of experience in backend development, cloud automation, and modernizing large-scale enterprise systems. Skilled in Python, Java, OCI, and CI/CD pipeline engineering with a strong focus on performance optimization and production reliability.",
 
   // ----------------------------------------------------------
   // 💼 WORK EXPERIENCE
@@ -54,6 +54,7 @@ const CONFIG = {
             "Enhanced and maintained core features of PeopleSoft Cloud Manager, a critical tool for streamlining the deployment and maintenance of PeopleSoft environments on OCI, serving over 200 customers globally.",
             "Facilitated the integration of Cloud Manager with various Oracle Cloud services, troubleshooting complex customer issues to boost application performance and user experience.",
             "Collaborated with QA and tools teams to streamline test automation workflows, creating automation scripts in shell to improve product quality and development efficiency by 5%.",
+            "Developed AI-powered workflows for debugging, log analysis, database inspection, and documentation generation, improving developer productivity by 30% across Java and Python codebases.",
           ],
         },
         {
@@ -78,7 +79,7 @@ const CONFIG = {
           bullets: [
             "Created a Python-based machine learning system to automatically process digital documents and detect piracy levels, serving as a core component of the Gordian project.",
             "Contributed to the back-end architecture design using Django and Flask, including database modeling with PostgreSQL and asynchronous task management with Celery.",
-            "Constructed a responsive front-end using the Angular framework and JavaScript, creating components for data visualization, secure authentication, and robust error handling.",
+            "Engineered an asynchronous Celery pipeline to generate PDF reports from 16GB+ datasets under memory constraints, leveraging a shared in-memory LRU Cache to eliminate redundant loads.",
           ],
         },
         {
@@ -87,6 +88,7 @@ const CONFIG = {
           bullets: [
             "Managed the full software development lifecycle from client interaction and customer support to code optimization, database design, and debugging.",
             "Gained hands-on experience with Python and frameworks like Django and Flask while contributing to the development of internal systems.",
+            "Constructed a responsive front-end using the Angular framework and JavaScript, creating components for data visualization, secure authentication, and robust error handling.",
           ],
         },
       ],
@@ -124,8 +126,9 @@ const CONFIG = {
       name: "Gordian – Piracy Detection System",
       dates: "2020 – 2021",
       bullets: [
-        "Created an automated PDF report generation system that outputs piracy detection results, boosting user experience by 20% through clear and comprehensive reports.",
+        "Engineered an asynchronous Celery pipeline to generate PDF reports from 16GB+ datasets under memory constraints, leveraging a shared in-memory LRU Cache to eliminate redundant loads.",
         "Analyzed and visualized over 50,000 data points using Python libraries like Pandas, NumPy, and Matplotlib to derive actionable insights into piracy trends.",
+        "Constructed a responsive front-end using the Angular framework and JavaScript, creating components for data visualization, secure authentication, and robust error handling."
       ],
     },
     {
@@ -149,7 +152,7 @@ const CONFIG = {
       dates: "2015 – 2019",
       gpa: "8.93",
       highlights: [
-        "University Rank 3 – Kerala Technological University (KTU)",
+        "University Rank 3 (Top 0.1% of cohort) – Kerala Technological University (KTU)",
         "College Class Representative / Leader (2018 – 2019)",
       ],
     },

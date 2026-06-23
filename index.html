@@ -257,9 +257,7 @@
 
       // --- Footer ---
       const footerContact = document.getElementById("footer-contact");
-      footerContact.innerHTML = `
-        <a href="mailto:${C.email}" class="footer-link">${icon("email")} ${C.email}</a>
-        <span class="footer-link">${icon("location")} ${C.address}</span>`;
+      footerContact.innerHTML = "";
 
       const footerSocials = document.getElementById("footer-socials");
       C.socialLinks.forEach(link => {
